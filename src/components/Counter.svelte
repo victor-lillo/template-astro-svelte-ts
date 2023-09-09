@@ -12,15 +12,10 @@
 
 <style>
   article {
-    color: var(--color-title);
-    opacity: 0.8;
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    padding: var(--size-spacing-1);
     display: flex;
-    padding: var(--size-spacing-2) var(--size-spacing-3);
     flex-direction: column;
     gap: var(--size-spacing-1);
+    align-items: center;
   }
   button {
     background: none;

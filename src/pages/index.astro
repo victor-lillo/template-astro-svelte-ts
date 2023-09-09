@@ -70,12 +70,14 @@ import Counter from '../components/Counter.svelte'
         body='Come say hi to our amazing Discord community. ❤️'
       />
     </ul>
-    <ButtonLink href='/another-page'>Another Page</ButtonLink>
     <section class='theme-switcher-container'>
-      Theme Switcher with Astro
-      <ThemeSwitcher />
+      <article>
+        Theme Switcher with Astro
+        <ThemeSwitcher />
+      </article>
+      <Counter client:visible />
     </section>
-    <Counter client:visible />
+    <ButtonLink href='/another-page'>Another Page</ButtonLink>
   </main>
 </Layout>
 
@@ -117,7 +119,7 @@ import Counter from '../components/Counter.svelte'
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
   }
   .instructions code {
     font-size: 0.8em;
@@ -137,8 +139,20 @@ import Counter from '../components/Counter.svelte'
     padding: 0;
   }
   .theme-switcher-container {
+    color: var(--color-title);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-spacing-1);
+    padding: var(--size-spacing-2) var(--size-spacing-3);
+    opacity: 0.8;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+  }
+  .theme-switcher-container article {
     display: flex;
     align-items: center;
-    color: var(--color-title);
+    gap: var(--size-spacing-1);
   }
 </style>
