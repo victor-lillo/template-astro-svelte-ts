@@ -41,9 +41,11 @@
 :root {
   color-scheme: light;
   --color-title: black;
+  --background-color: #cbcbcb;
 }
 
 .theme-dark {
   color-scheme: dark;
+  --background-color: #23262d;
   --color-title: white;
 }

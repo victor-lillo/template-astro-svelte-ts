@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import ButtonLink from '../components/ButtonLink.astro'
 import ThemeSwitcher from '../components/ThemeSwitcher.astro'
+import Counter from '../components/Counter.svelte'
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -74,6 +75,7 @@ import ThemeSwitcher from '../components/ThemeSwitcher.astro'
       Theme Switcher with Astro
       <ThemeSwitcher />
     </section>
+    <Counter client:visible />
   </main>
 </Layout>
 
