@@ -1,0 +1,15 @@
+<script is:inline>
+// Inline: not bundled, so will execute the first
+// We need to load theme asap, so we are handling it in the layout.
+const STORAGE_THEME_KEY = 'theme'
+const getLocalStorageTheme = (localStorageKey) => {
+    if (localStorage && localStorage.getItem(localStorageKey))
+        return localStorage.getItem(localStorageKey)
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
+    return 'light'
+}
+
+const theme = getLocalStorageTheme(STORAGE_THEME_KEY)
+const isDark = theme === 'dark'
+document.documentElement.classList.toggle('theme-dark', isDark)
+</script>
