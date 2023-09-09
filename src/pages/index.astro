@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import ButtonLink from '../components/ButtonLink.astro'
+import ThemeSwitcher from '../components/ThemeSwitcher.svelte'
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -69,6 +70,10 @@ import ButtonLink from '../components/ButtonLink.astro'
       />
     </ul>
     <ButtonLink href='/another-page'>Another Page</ButtonLink>
+    <section class='theme-switcher-container'>
+      Theme Switcher with Svelte
+      <ThemeSwitcher client:visible />
+    </section>
   </main>
 </Layout>
 
@@ -128,5 +133,10 @@ import ButtonLink from '../components/ButtonLink.astro'
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+  .theme-switcher-container {
+    display: flex;
+    align-items: center;
+    color: var(--color-title);
   }
 </style>
