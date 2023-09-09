@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint --ext .js,.astro src",
     "lint:fix": "eslint --ext .js,.astro src --fix",
-    "prettier:write": "prettier . --write"
+    "prettier": "prettier . --write"
   },
   "dependencies": {
     "@astrojs/svelte": "4.0.2",
