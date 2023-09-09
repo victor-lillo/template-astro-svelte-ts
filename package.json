@@ -1,0 +1,38 @@
+{
+  "name": "template-astro-svelte-ts",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint --ext .js,.astro src",
+    "lint:fix": "eslint --ext .js,.astro src --fix",
+    "prettier:write": "prettier . --write"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "4.0.2",
+    "astro": "3.0.12",
+    "svelte": "4.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "6.6.0",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.49.0",
+    "eslint-plugin-astro": "0.29.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "prettier": "3.0.3"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 version"
+    ],
+    "production": [
+      "defaults",
+      "> 0.1%",
+      "not dead"
+    ]
+  }
+}
