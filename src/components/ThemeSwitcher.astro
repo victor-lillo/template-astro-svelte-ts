@@ -1,7 +1,3 @@
----
-import ThemeInitiator from './ThemeInitiator.astro'
----
-
 <button
   aria-label='Switch web theme'
   id='theme-toggle'
@@ -9,7 +5,36 @@ import ThemeInitiator from './ThemeInitiator.astro'
   <div class='light-mode'>🌞</div>
   <div class='dark-mode'>🌑</div>
 </button>
-<ThemeInitiator />
+
+<script is:inline>
+// Inline: not bundled, so will execute the first
+// We need to load theme asap, so we are handling it in the layout.
+const STORAGE_THEME_KEY = 'theme'
+const DARK_THEME_CLASS = 'theme-dark'
+const root = document.documentElement
+
+const getLocalStorageTheme = (localStorageKey) => {
+  if (localStorage && localStorage.getItem(localStorageKey))
+    return localStorage.getItem(localStorageKey)
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
+  return 'light'
+}
+
+const theme = getLocalStorageTheme(STORAGE_THEME_KEY)
+let isDark = theme === 'dark'
+
+root.classList.toggle(DARK_THEME_CLASS, isDark)
+
+function handleClick() {
+  isDark = !isDark
+
+  root.classList.toggle(DARK_THEME_CLASS, isDark)
+  localStorage.setItem(STORAGE_THEME_KEY, isDark ? 'dark' : 'light')
+}
+
+const button = document.getElementById('theme-toggle')
+button?.addEventListener('click', () => handleClick())
+</script>
 
 <style>
   button {
@@ -18,7 +43,6 @@ import ThemeInitiator from './ThemeInitiator.astro'
     font-size: 1.7rem;
     padding: 0.6rem;
   }
-
   @media (hover: hover) {
     button:hover {
       border-color: var(--color-primary-light-3);
@@ -31,7 +55,6 @@ import ThemeInitiator from './ThemeInitiator.astro'
   .theme-dark .dark-mode {
     display: flex;
   }
-
   .theme-dark .light-mode,
   .dark-mode {
     display: none;
