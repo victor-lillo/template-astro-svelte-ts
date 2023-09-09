@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import ButtonLink from '../components/ButtonLink.astro'
-import ThemeSwitcher from '../components/ThemeSwitcher.svelte'
+import ThemeSwitcher from '../components/ThemeSwitcher.astro'
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -72,7 +72,7 @@ import ThemeSwitcher from '../components/ThemeSwitcher.svelte'
     <ButtonLink href='/another-page'>Another Page</ButtonLink>
     <section class='theme-switcher-container'>
       Theme Switcher with Svelte
-      <ThemeSwitcher client:visible />
+      <ThemeSwitcher />
     </section>
   </main>
 </Layout>

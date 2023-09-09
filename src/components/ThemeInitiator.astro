@@ -2,6 +2,9 @@
 // Inline: not bundled, so will execute the first
 // We need to load theme asap, so we are handling it in the layout.
 const STORAGE_THEME_KEY = 'theme'
+const DARK_THEME_CLASS = 'theme-dark'
+const root = document.documentElement
+
 const getLocalStorageTheme = (localStorageKey) => {
     if (localStorage && localStorage.getItem(localStorageKey))
         return localStorage.getItem(localStorageKey)
@@ -10,6 +13,17 @@ const getLocalStorageTheme = (localStorageKey) => {
 }
 
 const theme = getLocalStorageTheme(STORAGE_THEME_KEY)
-const isDark = theme === 'dark'
-document.documentElement.classList.toggle('theme-dark', isDark)
+let isDark = theme === 'dark'
+
+root.classList.toggle(DARK_THEME_CLASS, isDark)
+
+function handleClick() {
+    isDark = !isDark
+
+    root.classList.toggle(DARK_THEME_CLASS, isDark)
+    localStorage.setItem(STORAGE_THEME_KEY, isDark ? 'dark' : 'light')
+}
+
+const button = document.getElementById('theme-toggle')
+button?.addEventListener('click', () => handleClick())
 </script>

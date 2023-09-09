@@ -1,0 +1,39 @@
+---
+import ThemeInitiator from './ThemeInitiator.astro'
+---
+
+<button
+  aria-label='Switch web theme'
+  id='theme-toggle'
+>
+  <div class='light-mode'>🌞</div>
+  <div class='dark-mode'>🌑</div>
+</button>
+<ThemeInitiator />
+
+<style>
+  button {
+    background: none;
+    border: 1px solid transparent;
+    font-size: 1.7rem;
+    padding: 0.6rem;
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      border-color: var(--color-primary-light-3);
+    }
+  }
+</style>
+
+<style is:global>
+  .light-mode,
+  .theme-dark .dark-mode {
+    display: flex;
+  }
+
+  .theme-dark .light-mode,
+  .dark-mode {
+    display: none;
+  }
+</style>

@@ -4,7 +4,6 @@ import '../styles/normalize.css'
 import '../styles/reset.local.css'
 import '../styles/tokens.css'
 
-import ThemeInitiator from '../components/ThemeInitiator.astro'
 interface Props {
   title: string
 }
@@ -37,8 +36,6 @@ const { title } = Astro.props
   </head>
   <body>
     <slot />
-
-    <ThemeInitiator />
   </body>
 </html>
 <style is:global>
