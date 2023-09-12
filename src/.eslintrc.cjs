@@ -22,5 +22,13 @@ module.exports = {
         'astro/prefer-object-class-list': 'error',
       },
     },
+    {
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser',
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        '@typescript-eslint/ban-tslint-comment': 'error',
+      },
+    },
   ],
 }
