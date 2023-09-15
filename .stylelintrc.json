@@ -1,4 +1,11 @@
 {
   "extends": ["stylelint-config-html"],
-  "rules": { "rule-empty-line-before": "always" }
+  "rules": {
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested", "after-single-line-comment"]
+      }
+    ]
+  }
 }
