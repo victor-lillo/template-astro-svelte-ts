@@ -17,6 +17,7 @@
     gap: var(--size-spacing-1);
     align-items: center;
   }
+
   button {
     background: none;
     border: 1px solid transparent;
