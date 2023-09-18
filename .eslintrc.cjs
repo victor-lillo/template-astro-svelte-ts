@@ -9,6 +9,10 @@ module.exports = {
     // Sometimes we will prefer strict
     // 'plugin:astro/jsx-a11y-strict',
   ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
   overrides: [
     {
       files: ['*.astro'],
