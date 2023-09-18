@@ -10,7 +10,7 @@ export interface Props {
 const {
   description = `${SITE.title} website.`,
   title = SITE.title,
-  ogImage = `${SITE.title}/seo/logo.jpg`,
+  ogImage = `${SITE.website}/seo/logo.jpg`,
 } = Astro.props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
