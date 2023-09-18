@@ -1,12 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import { SITE } from '../config'
 import ButtonLink from '../components/ButtonLink.astro'
-import ThemeSwitcher from '../components/ThemeSwitcher.astro'
+import Card from '../components/Card.astro'
 import Counter from '../components/Counter.svelte'
+import Layout from '../layouts/Layout.astro'
+import ThemeSwitcher from '../components/ThemeSwitcher.astro'
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout
+  description={SITE.description}
+  title={SITE.title}
+>
   <main>
     <svg
       class='astro-a'

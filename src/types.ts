@@ -1,8 +1,7 @@
 export type Site = {
-  website: string
-  author: string
   description: string
   title: string
+  website: string
 }
 
 export type SocialObjects = {
