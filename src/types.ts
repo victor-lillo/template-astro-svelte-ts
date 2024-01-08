@@ -1,6 +1,6 @@
 export type Site = {
   description: string
-  title: string
+  name: string
   website: string
 }
 

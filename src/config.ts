@@ -2,7 +2,7 @@ import type { Site, SocialObjects } from './types'
 
 export const SITE: Site = {
   description: 'Your meta description.',
-  title: 'Fentos Template',
+  name: 'Fentos Template',
   website: 'https://fentos.template',
 }
 
@@ -12,17 +12,17 @@ export const SOCIALS: SocialObjects = [
   {
     name: 'Github',
     href: 'yourhref.com',
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: ` ${SITE.name} on Github`,
   },
 
   {
     name: 'LinkedIn',
     href: 'yourhref.com',
-    linkTitle: `${SITE.title} on LinkedIn`,
+    linkTitle: `${SITE.name} on LinkedIn`,
   },
   {
     name: 'Mail',
     href: 'mailto:yourmail@gmail.com',
-    linkTitle: `Send an email to ${SITE.title}`,
+    linkTitle: `Send an email to ${SITE.name}`,
   },
 ]
