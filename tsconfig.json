@@ -3,7 +3,11 @@
   "compilerOptions": {
     "baseUrl": "src",
     "resolveJsonModule": true,
-    "moduleResolution": "node"
+    "allowJs": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@components/*": ["components/*"]
+    }
   },
   "exclude": ["node_modules", ".vscode", "dist"]
 }
