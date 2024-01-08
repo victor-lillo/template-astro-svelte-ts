@@ -3,6 +3,9 @@ module.exports = {
     node: true,
     es2022: true,
   },
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   extends: [
     'plugin:astro/recommended',
     'plugin:astro/jsx-a11y-recommended',
@@ -32,6 +35,22 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         '@typescript-eslint/ban-tslint-comment': 'error',
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag.
+      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      parser: '@typescript-eslint/parser',
+    },
+    {
+      files: ['*.md', '*.mdx'],
+      extends: ['plugin:mdx/recommended'],
+      settings: {
+        'mdx/code-blocks': true,
+      },
+      rules: {
+        '@typescript-eslint/no-unused-vars': false,
       },
     },
   ],
