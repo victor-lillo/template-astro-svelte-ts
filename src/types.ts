@@ -15,3 +15,10 @@ export type SocialIcons = {
 }
 
 export type SocialMedia = 'Github' | 'LinkedIn' | 'Mail'
+
+export enum Icons {
+  Github = 'Github',
+  LinkedIn = 'LinkedIn',
+  Mail = 'Mail',
+  Npm = 'Npm',
+}

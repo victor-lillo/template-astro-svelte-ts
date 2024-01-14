@@ -1,0 +1,20 @@
+---
+import { Icons } from '../types'
+
+interface Props {
+  iconName: Icons
+  size?: string
+}
+
+import Github from './icons/Github.astro'
+import LinkedIn from './icons/Linkedin.astro'
+import Mail from './icons/Mail.astro'
+import Npm from './icons/Npm.astro'
+
+const { iconName, size } = Astro.props
+---
+
+{iconName === Icons.Github && <Github size={size} />}
+{iconName === Icons.LinkedIn && <LinkedIn size={size} />}
+{iconName === Icons.Mail && <Mail size={size} />}
+{iconName === Icons.Npm && <Npm size={size} />}
