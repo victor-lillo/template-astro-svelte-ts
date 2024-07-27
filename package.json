@@ -8,11 +8,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "tsc --noEmit",
     "oxlint": "npx --yes oxlint@latest",
-    "lint": "eslint --ext .js,.astro,.svelte src",
-    "lint:fix": "eslint --ext .js,.astro,.svelte src --fix",
-    "prettier": "prettier . --write"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint \"**/*.{css,astro,svelte}\"",
+    "stylelint:fix": "stylelint \"**/*.{css,astro,svelte}\" --fix"
   },
   "dependencies": {
     "@astrojs/svelte": "5.7.0",
