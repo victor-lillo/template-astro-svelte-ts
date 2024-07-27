@@ -5,8 +5,8 @@
 <article>
   Count: {count}
   <div>
-    <button on:click={() => count++}>+</button>
-    <button on:click={() => count--}>-</button>
+    <button type="button" on:click={() => count++}>+</button>
+    <button type="button" on:click={() => count--}>-</button>
   </div>
 </article>
 

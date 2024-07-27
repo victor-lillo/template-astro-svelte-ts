@@ -7,8 +7,8 @@ const { href, target } = Astro.props
 ---
 
 <a
-  {href}
-  {target}
+  href={href}
+  target={target}
   class='button'
   rel={href.startsWith('/') ? undefined : 'noopener noreferrer'}
 >
