@@ -32,15 +32,5 @@
     "stylelint": "16.7.0",
     "stylelint-config-html": "1.1.0",
     "typescript": "5.5.4"
-  },
-  "browserslist": {
-    "development": [
-      "last 1 version"
-    ],
-    "production": [
-      "defaults",
-      "> 0.1%",
-      "not dead"
-    ]
   }
 }
