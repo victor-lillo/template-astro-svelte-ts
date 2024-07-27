@@ -35,5 +35,6 @@
     "stylelint-config-html": "1.1.0",
     "typescript": "5.5.4",
     "typescript-eslint": "7.17.0"
-  }
+  },
+  "packageManager": "pnpm@9.6.0"
 }
