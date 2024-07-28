@@ -2,8 +2,8 @@ import type { Site, SocialObjects } from './types'
 
 export const SITE: Site = {
   description: 'Your meta description.',
-  name: 'Fentos Template',
-  website: 'https://fentos.template',
+  name: 'Your Site Template',
+  website: 'https://your-site.template',
 }
 
 export const LOCALE = ['en-EN']
