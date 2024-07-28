@@ -15,12 +15,12 @@ export const NAVS: NavigationObjects = [
     accessibleText: 'Your site home page',
   },
   {
-    name: 'Projects',
-    href: '/projects',
+    name: 'Page 1',
+    href: '/page-1',
   },
   {
-    name: 'Blog',
-    href: `/blog`,
+    name: 'Page 2',
+    href: '/page-2',
   },
 ]
 
