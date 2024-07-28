@@ -4,6 +4,7 @@ import '@/styles/normalize.css'
 import '@/styles/reset.local.css'
 import '@/styles/tokens.css'
 
+import Header from '@/components/Header.astro'
 import SEO from '@/components/SEO.astro'
 
 interface Props {
@@ -33,10 +34,11 @@ const { description, title } = Astro.props
     />
   </head>
   <body>
+    <Header />
     <slot />
     <style>
       html {
-        background: #13151a;
+        background: var(--background-color);
       }
     </style>
   </body>
