@@ -1,0 +1,101 @@
+---
+import { NAVS } from '@/config'
+import Logo from '@/components/icons/Logo.astro'
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
+
+const currentPath = Astro.url.pathname
+const lastSlashRegex = /\/$/
+const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
+---
+
+<header>
+  {
+    NAVS.map(({ accessibleText, href, name }, index) => {
+      const isSelected = href.length > 1 && normalizedCurrentPath === href
+      return (
+        <a
+          href={href}
+          class:list={[
+            {
+              separated: index === 1,
+              selected: isSelected,
+              logo: href === '/',
+              link: href !== '/',
+            },
+          ]}
+        >
+          {accessibleText && <span class='visually-hidden'>{accessibleText}</span>}
+          {href === '/' ? <Logo /> : name}
+        </a>
+      )
+    })
+  }
+
+  <ThemeSwitcher />
+</header>
+
+<style>
+  header {
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    gap: 1rem;
+    width: var(--content-width);
+  }
+
+  .link {
+    font-size: 1.2rem;
+    position: relative;
+  }
+
+  @media (width > 48rem) {
+    .link {
+      font-size: 1.4rem;
+    }
+  }
+
+  .link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    height: 3px;
+    background-color: var(--color-accent-1);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+
+  .separated {
+    margin-left: auto;
+  }
+
+  .selected::after {
+    transform: scaleX(1);
+  }
+
+  @media (hover: hover) {
+    .logo:hover {
+      color: var(--color-accent-1);
+      filter: drop-shadow(0 0 0.5rem var(--color-accent-4));
+    }
+
+    .link:hover:not(.selected)::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    :is(.link, .logo):focus-visible {
+      outline: var(--outline-focus-visible);
+      border-radius: var(--border-radius-1);
+    }
+  }
+</style>
