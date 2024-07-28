@@ -36,15 +36,12 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
 
 <style>
   header {
-    color: var(--color-text);
-    font-weight: var(--font-weight-medium);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: auto;
     gap: 1rem;
-    width: var(--content-width);
   }
 
   .link {
@@ -85,17 +82,6 @@ const normalizedCurrentPath = currentPath.replace(lastSlashRegex, '')
   @media (hover: hover) {
     .logo:hover {
       color: var(--color-accent-1);
-      filter: drop-shadow(0 0 0.5rem var(--color-accent-4));
-    }
-
-    .link:hover:not(.selected)::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
-    :is(.link, .logo):focus-visible {
-      outline: var(--outline-focus-visible);
-      border-radius: var(--border-radius-1);
     }
   }
 </style>
