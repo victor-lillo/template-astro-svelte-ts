@@ -1,6 +1,14 @@
+---
+interface Props {
+  size?: string
+}
+
+const { size = '36' } = Astro.props
+---
+
 <svg
-  width='32'
-  height='32'
+  height={size}
+  width={size}
   viewBox='-1 2 20 20'
   stroke-width='1.5'
   stroke='currentColor'
