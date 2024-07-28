@@ -1,4 +1,4 @@
-import type { Site, SocialObjects } from './types'
+import type { NavigationObjects, Site, SocialObjects } from './types'
 
 export const SITE: Site = {
   description: 'Your meta description.',
@@ -7,6 +7,22 @@ export const SITE: Site = {
 }
 
 export const LOCALE = ['en-EN']
+
+export const NAVS: NavigationObjects = [
+  {
+    name: 'Your site logo',
+    href: '/',
+    accessibleText: 'Your site home page',
+  },
+  {
+    name: 'Projects',
+    href: '/projects',
+  },
+  {
+    name: 'Blog',
+    href: `/blog`,
+  },
+]
 
 export const SOCIALS: SocialObjects = [
   {
