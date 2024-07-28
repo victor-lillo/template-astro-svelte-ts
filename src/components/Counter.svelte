@@ -23,8 +23,9 @@
     border: 1px solid transparent;
     border-radius: var(--border-radius);
     font-size: 1.7rem;
-    background-color: #310a65a8;
+    background-color: var(--color-accent-1);
     width: 5ch;
+    padding: var(--size-spacing-1);
   }
 
   @media (hover: hover) {
