@@ -4,6 +4,13 @@ export interface Site {
   website: string
 }
 
+export type NavigationObjects = {
+  accessibleText?: string
+  current?: boolean
+  href: string
+  name: string
+}[]
+
 export type SocialObjects = {
   name: SocialMedia
   href: string
