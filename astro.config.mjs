@@ -8,5 +8,6 @@ export default defineConfig({
   integrations: [svelte()],
   server: {
     open: true,
+    port: 3000,
   },
 })
