@@ -1,6 +1,6 @@
 /* Sizes */
 :root {
-  --border-radius: 8px;
+  --border-radius-1: 8px;
   --section-width: 90%;
 
   --size-spacing-1: 0.4rem;

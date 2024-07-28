@@ -21,7 +21,7 @@
   button {
     background: none;
     border: 1px solid transparent;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-1);
     font-size: 1.7rem;
     background-color: var(--color-accent-1);
     width: 5ch;
